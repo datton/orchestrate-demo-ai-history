@@ -11,18 +11,5 @@ h1, h2 { font-family: var(--font-display); line-height: var(--leading-tight); co
 h1 { font-size: var(--text-2xl); }
 h2 { font-size: var(--text-xl); margin: var(--space-5) 0 var(--space-2); }
 .hero { display: block; margin: var(--space-5) 0; border-radius: var(--radius-md); }
-.card-list, .people { list-style: none; padding: 0; margin: var(--space-4) 0; display: grid; gap: var(--space-4); }
-.card-list li, .people li { background: var(--color-mist); border-radius: var(--radius-md); box-shadow: var(--shadow-card); padding: var(--space-4); }
-.card-list img { vertical-align: middle; margin-right: var(--space-2); }
-.people h2 { margin-top: 0; font-size: var(--text-lg); }
-.people p { margin: 0; }
 section + section { margin-top: var(--space-4); }
-.filters { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: var(--space-4) 0; }
-.filters button { font: inherit; min-height: 44px; padding: var(--space-2) var(--space-4); color: var(--color-teal); background: transparent; border: 2px solid var(--color-teal); border-radius: var(--radius-sm); cursor: pointer; }
-.filters button[aria-pressed="true"] { color: var(--color-on-navy); background: var(--color-navy); border-color: var(--color-navy); }
-.filters button:focus-visible { outline: 3px solid var(--color-navy); outline-offset: 2px; }
-.timeline { list-style: none; margin: var(--space-4) 0; padding: 0 0 0 var(--space-4); border-left: 3px solid var(--color-teal); }
-.timeline li { margin-bottom: var(--space-5); }
-.timeline h2 { margin: 0; font-size: var(--text-lg); color: var(--color-amber); }
-.timeline p { margin: var(--space-1) 0 0; }
-@media (min-width: 48rem) { .card-list, .people { grid-template-columns: 1fr 1fr; } }
+/* Cards, timeline and filters are styled in layout.css */
