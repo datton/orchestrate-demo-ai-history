@@ -7,15 +7,15 @@ main { flex: 1 0 auto; width: 100%; max-width: var(--content-width); margin: 0 a
 main > * { max-width: 100%; }
 
 /* ---------- Header ---------- */
-.site-header { position: sticky; top: 0; z-index: 10; background: var(--color-navy); color: var(--color-on-navy); box-shadow: 0 2px 12px rgba(20,33,61,.25); }
-.brand { display: inline-flex; align-items: center; gap: var(--space-3); min-height: 44px; font-family: var(--font-display); font-weight: 700; font-size: var(--text-lg); line-height: 1.1; color: var(--color-on-navy); text-decoration: none; }
+.site-header { position: sticky; top: 0; z-index: 10; background: var(--gradient-deep); color: var(--color-on-deep); box-shadow: 0 2px 12px rgba(21,13,46,.3); }
+.brand { display: inline-flex; align-items: center; gap: var(--space-3); min-height: 44px; font-family: var(--font-display); font-weight: 700; font-size: var(--text-lg); line-height: 1.1; color: var(--color-on-deep); text-decoration: none; }
 .brand img { display: block; border-radius: 8px; flex: none; }
 .site-header a:focus-visible, .nav-toggle:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 2px; }
 
 .site-header nav ul { list-style: none; margin: 0; padding: 0; }
-.site-header nav a { display: flex; align-items: center; min-height: 48px; padding: var(--space-2) var(--space-4); color: var(--color-on-navy); text-decoration: none; font-weight: 600; border-left: 4px solid transparent; }
+.site-header nav a { display: flex; align-items: center; min-height: 48px; padding: var(--space-2) var(--space-4); color: var(--color-on-deep); text-decoration: none; font-weight: 600; border-left: 4px solid transparent; }
 .site-header nav a:hover { background: rgba(247,245,239,.1); }
-.site-header nav a[aria-current="page"] { color: var(--color-amber-light); border-left-color: var(--color-amber-light); background: rgba(247,245,239,.07); }
+.site-header nav a[aria-current="page"] { color: var(--color-gold); border-left-color: var(--color-gold); background: rgba(247,245,239,.07); }
 
 /* Without JavaScript the links simply show under the brand */
 .site-header { display: block; padding: 0; }
@@ -23,7 +23,7 @@ main > * { max-width: 100%; }
 .site-header nav { border-top: 1px solid rgba(247,245,239,.18); }
 
 /* With JavaScript: brand + menu button bar, dropdown panel */
-.nav-toggle { display: none; align-items: center; gap: var(--space-2); min-height: 44px; padding: var(--space-2) var(--space-4); font: inherit; font-weight: 600; color: var(--color-on-navy); background: transparent; border: 2px solid var(--color-on-navy); border-radius: var(--radius-sm); cursor: pointer; }
+.nav-toggle { display: none; align-items: center; gap: var(--space-2); min-height: 44px; padding: var(--space-2) var(--space-4); font: inherit; font-weight: 600; color: var(--color-on-deep); background: transparent; border: 2px solid var(--color-on-deep); border-radius: var(--radius-sm); cursor: pointer; }
 .nav-toggle .bars { width: 18px; height: 12px; background: linear-gradient(currentColor 0 0) 0 0/100% 2px no-repeat, linear-gradient(currentColor 0 0) 0 50%/100% 2px no-repeat, linear-gradient(currentColor 0 0) 0 100%/100% 2px no-repeat; }
 .js .nav-toggle { display: inline-flex; }
 .js .site-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: var(--space-1) var(--space-4); }
@@ -32,16 +32,16 @@ main > * { max-width: 100%; }
 .js .site-header nav[data-collapsed="true"] { display: none; }
 
 /* ---------- Footer ---------- */
-.site-footer { background: var(--color-navy); color: var(--color-on-navy); font-size: var(--text-sm); }
+.site-footer { background: var(--color-deep); color: var(--color-on-deep); font-size: var(--text-sm); }
 .site-footer p { max-width: var(--content-width); margin: 0 auto; padding: var(--space-5) var(--space-4); }
-.site-footer a { color: var(--color-teal-light); }
+.site-footer a { color: var(--color-primary-light); }
 .site-footer a:focus-visible { outline-color: var(--color-focus); }
 
 /* ---------- Page rhythm ---------- */
 main h1 { font-size: var(--text-3xl); letter-spacing: -.01em; margin: var(--space-4) 0 var(--space-3); }
-main h1::after { content: ""; display: block; width: 4rem; height: 5px; margin-top: var(--space-3); background: var(--color-amber); border-radius: 3px; }
+main h1::after { content: ""; display: block; width: 4rem; height: 6px; margin-top: var(--space-3); background: var(--gradient-spark); border-radius: 3px; }
 main .lead { font-size: var(--text-lg); color: var(--color-ink-soft); max-width: 42rem; margin: 0 0 var(--space-5); }
-main p, main li { max-width: 46rem; }
+main p, main li { max-width: var(--measure); }
 main .hero { width: 100%; max-width: 100%; box-shadow: var(--shadow-card); }
 main section { margin-top: var(--space-6); }
 main section + section { margin-top: var(--space-6); }
@@ -49,29 +49,29 @@ main h2 { margin-top: 0; }
 
 /* Cards */
 main .card-list, main .people { gap: var(--space-4); }
-main .card-list li, main .people li { max-width: none; background: #fff; border: 1px solid var(--color-line); border-top: 4px solid var(--color-teal); transition: transform .15s ease, box-shadow .15s ease; }
+main .card-list li, main .people li { max-width: none; background: #fff; border: 1px solid var(--color-line); border-top: 4px solid var(--color-primary); transition: transform .15s ease, box-shadow .15s ease; }
 main .card-list li { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-3); padding: var(--space-5); }
 main .card-list a { font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700; }
 main .card-list img { width: 48px; height: 48px; margin: 0; }
-main a:focus-visible { outline: 3px solid var(--color-teal); outline-offset: 3px; border-radius: 2px; }
+main a:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 3px; border-radius: 2px; }
 
 /* Timeline: rail with dots, year badges and cards */
 main .filters { gap: var(--space-2); margin: var(--space-5) 0 var(--space-4); }
 main .filters button { border-radius: 999px; padding: var(--space-2) var(--space-4); font-weight: 600; }
 main .filters button:hover { background: var(--color-mist); }
-main .filters button[aria-pressed="true"]:hover { background: var(--color-navy); }
-main .filters button:focus-visible { outline: 3px solid var(--color-teal); outline-offset: 2px; }
+main .filters button[aria-pressed="true"]:hover { background: var(--color-deep); }
+main .filters button:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 2px; }
 main .timeline { position: relative; margin: var(--space-5) 0; padding: 0 0 0 var(--space-6); border-left: 0; }
-main .timeline::before { content: ""; position: absolute; left: 11px; top: 0; bottom: 0; width: 4px; border-radius: 2px; background: linear-gradient(var(--color-teal), var(--color-amber)); }
+main .timeline::before { content: ""; position: absolute; left: 11px; top: 0; bottom: 0; width: 4px; border-radius: 2px; background: var(--gradient-spark); }
 main .timeline li { position: relative; max-width: none; margin: 0 0 var(--space-4); padding: var(--space-4) var(--space-5); background: #fff; border: 1px solid var(--color-line); border-radius: var(--radius-md); box-shadow: var(--shadow-card); }
 main .timeline li[hidden] { display: none; }
-main .timeline li::before { content: ""; position: absolute; left: calc(-1 * var(--space-6) + 4px); top: 1.35rem; width: 16px; height: 16px; border-radius: 50%; background: var(--color-paper); border: 4px solid var(--color-amber); }
+main .timeline li::before { content: ""; position: absolute; left: calc(-1 * var(--space-6) + 4px); top: 1.35rem; width: 16px; height: 16px; border-radius: 50%; background: var(--color-paper); border: 4px solid var(--color-highlight); }
 main .timeline li::after { content: ""; position: absolute; left: -1.1rem; top: 1.6rem; width: 1.1rem; height: 3px; background: var(--color-line); }
-main .timeline h2 { display: inline-block; margin: 0 0 var(--space-2); padding: var(--space-1) var(--space-3); font-family: var(--font-body); font-size: var(--text-base); font-weight: 700; letter-spacing: .03em; color: var(--color-on-navy); background: var(--color-navy); border-radius: 999px; }
+main .timeline h2 { display: inline-block; margin: 0 0 var(--space-2); padding: var(--space-1) var(--space-3); font-family: var(--font-body); font-size: var(--text-base); font-weight: 700; letter-spacing: .03em; color: var(--color-on-deep); background: var(--color-deep); border-radius: 999px; }
 main .timeline p { margin: 0; max-width: none; }
 
 @media (hover: hover) {
-  main .card-list li:hover, main .people li:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(20,33,61,.18); }
+  main .card-list li:hover, main .people li:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(21,13,46,.2); }
 }
 @media (prefers-reduced-motion: reduce) { main .card-list li, main .people li { transition: none; } main .card-list li:hover, main .people li:hover { transform: none; } }
 
@@ -83,7 +83,7 @@ main .timeline p { margin: 0; max-width: none; }
   .site-header nav, .js .site-header nav { border-top: 0; flex-basis: auto; margin: 0; }
   .site-header nav ul { display: flex; gap: var(--space-1); }
   .site-header nav a { min-height: 44px; padding: var(--space-2) var(--space-3); border-left: 0; border-bottom: 4px solid transparent; border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
-  .site-header nav a[aria-current="page"] { border-bottom-color: var(--color-amber-light); }
+  .site-header nav a[aria-current="page"] { border-bottom-color: var(--color-gold); }
   .js .nav-toggle { display: none; }
   .js .site-header nav[data-collapsed="true"] { display: block; }
   main .card-list, main .people { grid-template-columns: 1fr 1fr; }
