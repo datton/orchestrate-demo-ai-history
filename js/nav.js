@@ -19,7 +19,7 @@
   btn.className = 'nav-toggle';
   btn.setAttribute('aria-controls', list.id);
   btn.setAttribute('aria-expanded', 'false');
-  btn.textContent = 'Menu';
+  btn.innerHTML = '<span class="bars" aria-hidden="true"></span><span>Menu</span>';
   nav.parentNode.insertBefore(btn, nav);
   nav.setAttribute('data-collapsed', 'true');
 
