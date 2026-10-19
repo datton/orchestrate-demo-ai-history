@@ -1,2 +1,2 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="t"><title id="t">Breakthroughs</title>
-<g fill="none" stroke="#0b6e75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M26 5 10 27h12l-3 16 19-23H26z"/></g></svg>
+<rect x="3" y="3" width="42" height="42" rx="12" fill="#efeafc"/><path d="M27 8 14 26h9l-3 14 14-19h-9z" fill="#5a2bd6" stroke="#5a2bd6" stroke-width="2" stroke-linejoin="round"/><circle cx="36" cy="12" r="3" fill="#b8236b"/></svg>

@@ -1,58 +1,72 @@
-/* Design tokens for The History of AI.
-   Palette: warm paper, deep navy ink, circuit teal and filament amber.
+/* Design tokens for The History of AI (reskin: "Midnight & Signal").
+   Palette: warm paper, midnight violet ink, electric violet for action,
+   signal magenta for highlights, gold for focus and sparks.
    Every text/background pair below meets WCAG AA (4.5:1) or better. */
 :root {
   /* Colour: surfaces */
-  --color-paper: #f7f5ef;        /* page background */
-  --color-mist: #e8eef2;         /* cards, alternate bands */
-  --color-navy: #14213d;         /* dark bands, footer */
+  --color-paper: #fbf9f4;        /* page background */
+  --color-mist: #efeafc;         /* cards, alternate bands (lavender tint) */
+  --color-deep: #150d2e;         /* dark bands, hero, footer */
   /* Colour: text */
-  --color-ink: #14213d;          /* body text on paper: 14.7:1 */
-  --color-ink-soft: #4a5568;     /* secondary text on paper: 6.9:1 */
-  --color-on-navy: #f7f5ef;      /* text on navy: 14.7:1 */
+  --color-ink: #1c1533;          /* body text on paper 16.6:1, on mist 14.8:1 */
+  --color-ink-soft: #52496b;     /* secondary text on paper 7.9:1, on mist 7.1:1 */
+  --color-on-deep: #fbf9f4;      /* text on deep 17.7:1 */
   /* Colour: accents */
-  --color-teal: #0b6e75;         /* links, buttons on paper: 5.5:1 */
-  --color-amber: #a24a06;        /* highlights on paper: 5.5:1 */
-  --color-teal-light: #7fd6d9;   /* links on navy: 9.5:1 */
-  --color-amber-light: #f2b84b;  /* highlights on navy: 8.9:1 */
-  --color-focus: #f2b84b;        /* focus ring; pair with navy outline offset */
-  --color-line: #c5cfd8;         /* borders and rules */
+  --color-primary: #5a2bd6;      /* links, buttons on paper 7.3:1; white on it 7.6:1 */
+  --color-highlight: #b8236b;    /* dates, eyebrows on paper 5.7:1, on mist 5.1:1 */
+  --color-primary-light: #b9a4ff; /* links on deep 8.7:1 */
+  --color-highlight-light: #ff9ec7; /* highlights on deep 9.7:1 */
+  --color-gold: #ffc857;         /* sparks, focus ring on deep 12.1:1 */
+  --color-focus: #ffc857;
+  --color-line: #d9d2ec;         /* borders and rules */
+
+  /* Gradients for hero and bands */
+  --gradient-deep: linear-gradient(135deg, #150d2e 0%, #2a1466 60%, #4a1d8f 100%);
+  --gradient-spark: linear-gradient(90deg, #5a2bd6, #b8236b);
 
   /* Type: system fonts only */
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-display: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --weight-display: 700;
 
-  /* Type scale (1.25 ratio, fluid at the top end) */
+  /* Type scale (1.333 ratio, fluid at the top end) */
   --text-xs: 0.8rem;
-  --text-sm: 0.9rem;
-  --text-base: 1.0625rem;
-  --text-lg: 1.25rem;
-  --text-xl: 1.5625rem;
-  --text-2xl: clamp(1.9rem, 1.5rem + 1.6vw, 2.44rem);
-  --text-3xl: clamp(2.4rem, 1.7rem + 3vw, 3.8rem);
-  --leading-tight: 1.2;
-  --leading-body: 1.6;
+  --text-sm: 0.925rem;
+  --text-base: 1.125rem;
+  --text-lg: 1.375rem;
+  --text-xl: clamp(1.6rem, 1.3rem + 1vw, 1.95rem);
+  --text-2xl: clamp(2.1rem, 1.6rem + 2vw, 3rem);
+  --text-3xl: clamp(2.8rem, 1.8rem + 4.5vw, 5rem);
+  --leading-tight: 1.1;
+  --leading-body: 1.65;
+  --measure: 65ch;               /* comfortable line length */
 
   /* Spacing */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
   --space-4: 1rem;
-  --space-5: 1.5rem;
-  --space-6: 2.5rem;
-  --space-7: 4rem;
+  --space-5: 1.75rem;
+  --space-6: 3rem;
+  --space-7: 5rem;
 
   /* Shape */
-  --radius-sm: 4px;
-  --radius-md: 10px;
-  --radius-lg: 18px;
-  --shadow-card: 0 2px 10px rgba(20, 33, 61, 0.12);
-  --content-width: 68rem;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --shadow-card: 0 1px 2px rgba(21, 13, 46, 0.08), 0 8px 24px rgba(21, 13, 46, 0.1);
+  --content-width: 70rem;
 
-  /* Aliases used by the scaffold stylesheets */
+  /* Aliases kept so existing stylesheets keep working */
+  --color-navy: var(--color-deep);
+  --color-on-navy: var(--color-on-deep);
+  --color-teal: var(--color-primary);
+  --color-amber: var(--color-highlight);
+  --color-teal-light: var(--color-primary-light);
+  --color-amber-light: var(--color-highlight-light);
   --color-bg: var(--color-paper);
   --color-text: var(--color-ink);
-  --color-accent: var(--color-teal);
+  --color-accent: var(--color-primary);
   --space: var(--space-4);
 }

@@ -1,2 +1,2 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="t"><title id="t">AI today</title>
-<g fill="none" stroke="#0b6e75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="12" width="32" height="24" rx="5"/><circle cx="19" cy="24" r="3"/><circle cx="29" cy="24" r="3"/><path d="M24 12V6m0 0h0M16 41h16"/></g></svg>
+<rect x="3" y="3" width="42" height="42" rx="12" fill="#efeafc"/><rect x="11" y="15" width="26" height="20" rx="6" fill="#5a2bd6"/><circle cx="19" cy="25" r="3" fill="#fbf9f4"/><circle cx="29" cy="25" r="3" fill="#fbf9f4"/><path d="M24 15v-5" stroke="#b8236b" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="9" r="2.5" fill="#b8236b"/></svg>
