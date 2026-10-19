@@ -1,8 +1,58 @@
-/* Design tokens: owned by the Designer */
+/* Design tokens for The History of AI.
+   Palette: warm paper, deep navy ink, circuit teal and filament amber.
+   Every text/background pair below meets WCAG AA (4.5:1) or better. */
 :root {
-  --color-bg: #ffffff;
-  --color-text: #1a1a1a;
-  --color-accent: #1d4ed8;
-  --font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
-  --space: 1rem;
+  /* Colour: surfaces */
+  --color-paper: #f7f5ef;        /* page background */
+  --color-mist: #e8eef2;         /* cards, alternate bands */
+  --color-navy: #14213d;         /* dark bands, footer */
+  /* Colour: text */
+  --color-ink: #14213d;          /* body text on paper: 14.7:1 */
+  --color-ink-soft: #4a5568;     /* secondary text on paper: 6.9:1 */
+  --color-on-navy: #f7f5ef;      /* text on navy: 14.7:1 */
+  /* Colour: accents */
+  --color-teal: #0b6e75;         /* links, buttons on paper: 5.5:1 */
+  --color-amber: #a24a06;        /* highlights on paper: 5.5:1 */
+  --color-teal-light: #7fd6d9;   /* links on navy: 9.5:1 */
+  --color-amber-light: #f2b84b;  /* highlights on navy: 8.9:1 */
+  --color-focus: #f2b84b;        /* focus ring; pair with navy outline offset */
+  --color-line: #c5cfd8;         /* borders and rules */
+
+  /* Type: system fonts only */
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* Type scale (1.25 ratio, fluid at the top end) */
+  --text-xs: 0.8rem;
+  --text-sm: 0.9rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: clamp(1.9rem, 1.5rem + 1.6vw, 2.44rem);
+  --text-3xl: clamp(2.4rem, 1.7rem + 3vw, 3.8rem);
+  --leading-tight: 1.2;
+  --leading-body: 1.6;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+  --space-7: 4rem;
+
+  /* Shape */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+  --shadow-card: 0 2px 10px rgba(20, 33, 61, 0.12);
+  --content-width: 68rem;
+
+  /* Aliases used by the scaffold stylesheets */
+  --color-bg: var(--color-paper);
+  --color-text: var(--color-ink);
+  --color-accent: var(--color-teal);
+  --space: var(--space-4);
 }
